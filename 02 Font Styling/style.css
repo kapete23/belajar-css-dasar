@@ -1,0 +1,26 @@
+/* Property yang dimiliki oleh css terkait font:
+|+| font-family
+    Mengatur jenis font yang digunakan
+|+| font-size
+    Mengatur ukuran font
+|+| font-weight
+    Mengatur ketebalan font
+|+| font-variant
+    Mengubah font menjadi small caps
+|+| font-style
+    Mengubah font menjadi bercetak miring
+|+| line-height
+    Mengatur spasi antar baris */
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    /* font-weight: normal; */
+    font-variant: small-caps;
+    font-style: italic;
+}
+
+p {
+    font-family: serif;
+    line-height: 50px;
+}
