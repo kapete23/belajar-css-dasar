@@ -6,7 +6,7 @@
 |+| font-weight
     Mengatur ketebalan font
 |+| font-variant
-    Mengubah font menjadi small caps
+    Mengubah font menjadi small-caps, inherit, initial dan lain-lain.
 |+| font-style
     Mengubah font menjadi bercetak miring
 |+| line-height
@@ -24,3 +24,20 @@ p {
     font-family: serif;
     line-height: 50px;
 }
+
+/* Shorthand / singkatan untuk font.
+Misalnya menyederhanakan property berikut yg mengenai font */
+/* body { */
+    /* font-style: italic;
+    font-variant: normal;
+    font-weight: bold;
+    font-size: 160px;
+    line-height: 18px;
+    font-family: helvetica, Arial, sans-serif; */
+/* } */
+
+/* Bisa digantikan menjadi satu baris, yaitu */
+
+/* body { */
+    /* font:italic normal bold 160px/18px helvetica,Arial,sans-serif; */
+/* } */
