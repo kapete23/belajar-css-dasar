@@ -1,0 +1,35 @@
+/* Property yang dimiliki oleh css terkait text styling:
+|+| color
+    Memberikan warna pada tulisan
+|+| text-align 
+    Mengatur format paragraf/teks
+|+| text-indent 
+    Memberikan indentasi pada paragraf/teks
+|+| text-decoration
+    Mengatur dekorasi pada teks
+|+| text-transform
+    Mengubah jenis huruf menjadi huruf besar/kapital atau kecil.
+|+| letter-spacing
+    Mengatur spasi antar huruf
+|+| word-spacing
+    Mengatur spasi antar kata */
+
+h1 {
+    font-size: 80px;
+    color: rgba(159, 235, 38, 0.698);
+    text-decoration: underline;
+    text-decoration-color: chocolate;
+    text-transform: capitalize;
+}
+p {
+    text-align: justify;
+    text-indent: 45px;
+    letter-spacing: 0.1px;
+    word-spacing: 10px;
+}
+
+/* text-decoration bisa digunakan untuk menghilangkan garis bawah pada link */
+
+a {
+    text-decoration: none;
+}
