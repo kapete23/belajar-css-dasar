@@ -1,0 +1,47 @@
+/* Property yang dimiliki oleh css terkait background:
+|+| background-color
+    Mengatur warna pada background
+|+| background-image
+    Mengatur gambar yang digunakan pada backgrond
+|+| background-position
+    Mengatur posisi gambar pada background
+|+| background-repeat
+    Mengatur jenis pengulangan pada background */
+
+/* Mengulang gambar yang bernama file <swirl_pattern.png> secara otomatis terhadap sumbu x dan y */
+/* body { */
+    /* background-color: lightcoral;
+    background-image: url(Gambar/swirl_pattern/swirl_pattern.png); */
+/* } */
+
+/* Mengulang gambar yang bernama file <swirl_pattern.png> hanya satu sumbu aja */
+/* body { */
+    /* background-color: lightcoral;
+    background-image: url(Gambar/swirl_pattern/swirl_pattern.png);
+    background-repeat: repeat-x; */
+/* } */
+
+/* body { */
+    /* background-color: white;
+    background-image: url(Gambar/gradient.png);
+    background-repeat: repeat-x; */
+/* } */
+
+/* body { */
+    /* background-color: white;
+    background-image: url(Gambar/gradient\ -\ y.png);
+    background-repeat: repeat-y; */
+/* } */
+
+/* Tidak mengulang gambar (hanya satu gambar) */
+/* body { */
+    /* background-color: lightblue;
+    background-image: url(Gambar/spongebob-png-44219.png);
+    background-repeat: no-repeat;
+    background-position: bottom center; */
+/* } */
+
+/* Properti background bisa dibuat shorthand/disingkat, adalah: */
+body {
+    background: white url(Gambar/spongebob-png-44219.png) no-repeat top right;
+}
