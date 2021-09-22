@@ -1,0 +1,62 @@
+    /* Selector adalah digunakan pada css untuk mengenali sebuah elemen html yang akan diberi style. (Menurut hasil terjemahan pak Sandhika Galik dari http://www.w3schools.com/cssref/css_selectors.asp) */
+
+    /* Dalam syntax css adalah sebagai berikut: */
+    /* Selector {property:value;} */
+    
+    /* atau */
+
+    /* Selector { */
+        /* property:value;
+        property:value;
+        ........ */
+    /* } */
+
+    /* Apa saja yang digunakan dalam Selector, adalah sebagai berikut:
+    |+| Elemen html
+        Contoh: Menunjuk tag body, p (paragraf) dan lain-lain.
+    |+| id (Selektor khusus)
+        ini merupakan selektor buatan sendiri.
+        Kegunanaan id:
+        # Sebuah elemen html hanya boleh memeliki 1 id saja. 
+        Jadi antara elemen tidak boleh punya nama id yang sama. 
+        Misalnya pada element paragraf, antara paragraf satu dan dua itu tidak boleh mempunyai id yang sama.
+        # Setiap halaman hanya boleh memiliki 1 element dengan id tersebut.
+        # Dapat digunakan sebagai penanda halaman untuk link (hyperlink).
+        # Digunakan juga untuk javascript
+        # Sebaiknya tidak digunakan untuk CSS (lebih baik gunakan class).
+    |+| class (Selektor khusus)
+        ini merupakan selektor buatan sendiri.
+    |+| complex selector (ini tidak dibahas pada bagian ii)
+        Ini merupakan selektor yang sangat panjang atau kompleks */
+    
+    body {
+        font-family: Arial; 
+    }
+    h1,h2 { /* h1 dan h2 mempunyai ini property yang sama */
+        color: #48c30f;
+    }
+
+    ul li a { 
+        /* Cara membaca selektor ini adalah dari kanan ke kiri (CSS tolong tuliskan saya tag a yang ada di dalam li yang ada ul). */
+        color: orange;
+    }
+
+    ol li a {
+        color: red;
+    }
+
+    #p1 { /* Selektor khusus yang menggunakan id */
+        color: rgba(17, 182, 182, 0.719);
+    }
+
+    .p2 { /* Selektor khusus yang menggunakan class */
+        color: rgba(107, 21, 206, 0.877);
+    }
+
+    .cetak-tebal{
+        font-weight: bold;
+    }
+
+    p.cetak-tebal {
+        font-size: 19px;
+    }
