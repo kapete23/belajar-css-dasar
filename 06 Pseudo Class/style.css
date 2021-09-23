@@ -1,0 +1,84 @@
+/* Pseudo Class adalah kelas semu yang dimiliki oleh sebuah elemen html, yang membuat kita dapat mendefinisikan style pada "keadaan tertentu" dari elemen tersebut. (Menurut hasil terjemahan pak Sandhika Galik dari http://www.w3schools.com/css/css_pseudo_classes.asp) */
+
+/* Kenapa dibilang kelas semu, sebenernya kelas nya ada, tapi aktif dalam keadaan tertentu aja. */
+
+/* Berikut adalah contoh, itu dapat digunakan untuk: */
+/* |+| style sebuah elemen html ketika mouse dari seorang user mendekati objek (elemen html) atau dengan kata lain "mouse over".
+|+| style visited dan unvisited link website dengan berbeda.
+|+| style sebuah elemen ketika itu diklik agar mendapatkam fokus pada mouse dari penggunan. */
+/* Source: http://www.w3schools.com/css/css_pseudo_classes.asp */
+
+/* Pseudo class yang berhubungan dengan link: */
+/* |+| :link
+    Style default pada sebuah link (tag a yang memiliki href) artinya belum pernah meng-klik link atau unvisited.
+|+| :hover
+    Style ketika kursor mouse berada diatas sebuah link atau elemen (mouse over).
+|+| :active
+    Style ketika sebuah link di-klik (Keadaan aktif).
+|+| :visited
+    Style ketika sebuah link sudah pernah dikunjungi sebelumnya (menggunakan browser yang sama) */
+
+.hello:link {
+    color: coral;
+}
+
+.hello:hover {
+    font-size: 20px;
+    font-family: arial;
+    color: chartreuse;
+}
+
+.hello:active {
+    font-style: italic;
+    color: rgba(207, 7, 191, 0.657);
+}
+
+.hello:visited {
+    color: rgb(143, 137, 49);
+    font-weight: bolder;
+}
+
+/* Pseudo class yang berhubungan dengan posisi elemen (Pertama): */
+/* |+| :first-child
+    Memilih elemen pertama dari sebuah parent (elemen pembungkusnya misalnya pada tag ul, ol dan lain-lainnya).
+|+| :last-child
+    Memilih elemen terakhir dari sebuah parent (elemen pembungkus).
+|+| :nth-child(n)
+    Memilih elemen ke-n dari sebuah parent (elemen pembungkusnya).
+    n bisa diganti dengan urutan (1),(2),... atau pola (2n), (3n+2), (4n+1) atau ganjil (odd) dam genap (even). */
+
+li:first-child a:active {
+    color: rgba(57, 235, 41, 0.794);
+}
+
+li:last-child a {
+    color: hotpink;
+}
+
+li:nth-child(9) a {
+    color: gold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+li:nth-child(4n-2) a:hover {
+    color: green;
+    font-size: 25px;
+}
+
+li:nth-child(even) a {
+    font-size: small;
+}
+
+/* Pseudo class yang berhubungan dengan posisi elemen (Kedua): */
+/* |+| :first-of-type
+    Memilih elemen pertama dari sebuah jenis/tipe tag. (misalnya tag p yg merupakan paragraf)
+|+| :last-of-type
+    Memilih elemen terakhir dari sebuah jenis/tipe tag. */
+
+p:first-of-type {
+    color: rgba(0, 63, 252, 0.74);
+}
+
+p:last-of-type {
+    color: red;
+}
