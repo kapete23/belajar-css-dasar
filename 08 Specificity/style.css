@@ -1,0 +1,78 @@
+/* Konsep Specificity dalam CSS */ 
+/* Setiap deklarasi CSS (Selector) memiliki berat yang berbeda. Berat tersebut menentukan seberapa spesifik sebuah elemen dapat dipilih oleh selector. (Menurut hasil terjemahan pak Sandhika Galih dari http://www.smashingmagazine.com/2010/04/07/css-specificity-and-inheritance/) */
+
+/* Berikut ini syntax css: */
+/* p {color: red;} */
+/* p {color: green;} */
+/* Jika syntax diatas dibuat maka paragraf menjadi warna hijau, yang artinya perintah pertama ditimpah oleh perintah kedua sehingga seolah dieksekusi adalah perintah kedua. */
+
+/* Dengan menambahkan id pada paragraf tersebut yaitu p1, seperti yang ditunjukkan pada syntax berikut ini: */
+
+#p1 {color: red;}
+
+p {color: green;}
+
+/* Maka perintah yang dieksekusi adalah perintah baris pertama, karena selector #p1 lebih spesifik dari p. */
+
+/* Berikut ini cara menghitung nilai spesifik pada selector, adalah sebagai berikut: */
+/* Misalkan ada empat digit angka dalam bilangan desimal, yaitu: satuan, puluhan, ratusan, ribuan */
+
+/* jadi posisi inline (memberi style langsung pada html), id, class, dan element adalah sebagai berikut: */
+/* Posisi <element> adalah puluhan. */
+/* Posisi <class> adalah satuan. */
+/* Posisi <id> adalah ratusan. */
+/* Posisi <inline> adalah ribuan. */
+
+/* Kembali ke kasus pertama yaitu paragraf, maka berat atau kespesifikannya dari selector pertama dan kedua dapat dihitung: */
+/*
+        inline | id | class |  element
+#p1 =   0        1      0       0
+
+                    Versus
+
+p   =   0        0      0       1
+*/
+
+/* Maka 100 (selector #p1) lebih berat atau spesifik dari 1 (selector p), sehingga selector #p1 yang dilaksanakan perintahnya dengan membuat paragraf warna merah. */
+
+/* Contoh kasus kedua: */
+
+/* ul#bahasa li {color: green;} */
+
+/* .favorit {color: red;} */
+
+/* Maka berat atau kespesifikan adalah sebagai berikut: */
+/*
+                    inline | id | class |  element
+ul#bahasa li    =   0        1      0       2
+
+                    Versus
+
+.favorit        =   0        0      1       0
+*/
+
+/* Maka 102 (selector ul#bahasa li) lebih berat atau spesifik dari 10 (selector .favorit), sehingga selector ul#bahasa li yang dilaksanakan perintahnya dengan membuat semua list warna hijau. */
+
+/* Sekarang bagaimana cara membuat bahasa favorit menjadi warna merah (perintah kedua pada contoh kasus kedua), yaitu dengan menambah berat atau spesifik, sehingga menjadi: */
+
+ul#bahasa li {
+    color: green;
+}
+
+ul#bahasa li.favorit {
+    color: red;
+}
+
+/* Maka berat atau kespesifikan adalah sebagai berikut: */
+/*
+                        inline | id | class |  element
+ul#bahasa li        =   0        1      0       2
+
+                    Versus
+
+ul#bahasa li.favorit=   0        1      1       2
+*/
+
+/* Sehingga perintah kedua bisa dibuat. */
+
+/* Jika binggung menghitung nya, bisa mengunjungi website (kalkulator spesifik) berikut: https://specificity.keegan.st/ */
