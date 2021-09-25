@@ -1,0 +1,13 @@
+/* Inheritance dalam CSS adalah sebuah elemen mewarisi beberapa nilai properti yang dimiliki oleh elemen parent-nya. (Menurut hasil terjemahan pak Sandhika Galih dari http://www.w3.org/TR/CSS21/cascade.html#inheritance) */
+
+/* Contoh berikut yang sebagai parent adalah elemen body dan child adalah elemen a, parent mewarisi properti kolor ke child yaitu warna "darkgray". */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkgray;
+}
+
+a {
+    /* Jika perintah ini tidak dibuat yaitu dengan tidak menambahkan kata "inherit" pada properti color elemen a maka elemen a akan bewarna biru (tidak mewariskan warna "darkgray" dari parent-nya yaitu body. */
+    color:inherit;
+}
